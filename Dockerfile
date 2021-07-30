@@ -3,7 +3,7 @@ WORKDIR /opt
 USER root
 ENV LC_ALL=en_US.UTF-8 
 ENV PYTHONIOENCODING=UTF-8
-RUN apt update && apt install -y openssh-server git locales ruby tmux sudo ruby-dev && rm -rf /var/lib/apt/lists/* \
+RUN apt update && apt install -y python-pip openssh-server git locales ruby tmux sudo ruby-dev && rm -rf /var/lib/apt/lists/* \
     && sed -i "s|#PermitRootLogin prohibit-password|PermitRootLogin yes|g"  /etc/ssh/sshd_config && locale-gen en_US.UTF-8 \
     && wget https://bootstrap.pypa.io/ez_setup.py -O - | python
 RUN easy_install pip && pip install --upgrade pip &&　pip install --no-cache-dir pwntools capstone ropgadget formatStringExploiter ipython  && gem install one_gadget seccomp-tools
