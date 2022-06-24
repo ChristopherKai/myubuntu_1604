@@ -1,1 +1,1 @@
-docker run --rm -it -p30022:22  -v /c/Users/mount/kali/root:/root/mounted/ registry.cn-hangzhou.aliyuncs.com/kais_2020/pwn_ubuntu_1804
+docker run --name 1604 --rm -it -p30022:22  -v /c/Users/mount/kali/root:/root/mounted/ registry.cn-hangzhou.aliyuncs.com/kais_2020/pwn_ubuntu_1604 bash -c "tmux"
