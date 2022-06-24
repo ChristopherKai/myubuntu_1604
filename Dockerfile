@@ -82,7 +82,7 @@ RUN gem install one_gadget seccomp-tools && rm -rf /var/lib/gems/2.*/cache/*
 # RUN git clone --depth 1 https://github.com/pwndbg/pwndbg && \
 #     cd pwndbg && chmod +x setup.sh && ./setup.sh
 
-RUN git clone --depth 1 https://github.com/ChristopherKai/mypwndbg.git && cd mypwndbg && ./setup.sh 
+RUN git clone --depth 1 https://github.com/ChristopherKai/mypwndbg.git && cd mypwndbg && chmod +x setup.sh && ./setup.sh 
 
 RUN git clone https://github.com/ChristopherKai/myLibcSearcher.git && cd myLibcSearcher && python setup.py develop 
 
