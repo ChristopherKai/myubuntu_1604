@@ -20,6 +20,7 @@ RUN dpkg --add-architecture i386 && \
     cmake \
     ipython3 \
     vim \
+    sudo \
     openssh-server \
     net-tools \
     iputils-ping \
